@@ -1,4 +1,4 @@
-package video.inherit;
+package main.inherit;
 
 /**
  * Created by Administrator on 2016/8/14.

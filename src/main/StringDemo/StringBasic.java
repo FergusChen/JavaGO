@@ -1,4 +1,4 @@
-package video.StringDemo;
+package main.StringDemo;
 
 /**
  * Created by Administrator on 2016/8/17.
@@ -45,6 +45,7 @@ public class StringBasic {
         arr[index2] = temp;
     }
 
+    /**获取key在str中出现的次数*/
     public static int getSubStringCount(String str, String key){
         int count = 0;
         int index = 0;
@@ -55,10 +56,28 @@ public class StringBasic {
         return count;
     }
 
+    /**找到最长公共子串的低效方法*/
+    public static String getMaxSubString(String str1, String str2){
+        String longer = str1.length() > str2.length()? str1: str2;
+        String shorter = longer == str1 ? str2 : str1;
+
+        int minLength = shorter.length();
+        for(int i = 0; i < minLength; i++){
+            for(int j = 0, k = minLength - i; k != minLength + 1; j++, k++){
+                String subStr = shorter.substring(j, k);
+                if(longer.contains(subStr)){
+                    return subStr;
+                }
+            }
+        }
+        return "";
+    }
+
     public static void main(String[] args){
-        String str = "ABCDE";
+        String str = "CDEB";
         System.out.println(reverse(str, 1, 3));
         String str1 = "ABBCDEBBABC";
         System.out.println("key'BB' Count:" + getSubStringCount(str1, "BB"));
+        System.out.println(getMaxSubString(str, str1));
     }
 }
