@@ -1,5 +1,4 @@
-package main.CollectionDemo;
-import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
+package main.collection;
 
 import java.util.*;
 /**

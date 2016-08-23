@@ -1,4 +1,4 @@
-package main.CollectionDemo;
+package main.collection;
 import java.util.LinkedList;
 /**
  * Created by Administrator on 2016/8/22.

@@ -1,4 +1,4 @@
-package main.ArrayDemo;
+package main.array;
 
 /**
  * Created by Administrator on 2016/8/22.
