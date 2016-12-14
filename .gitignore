@@ -13,3 +13,5 @@ build
 .metadata
 *.iml
 .idea
+workspace.xml
+out

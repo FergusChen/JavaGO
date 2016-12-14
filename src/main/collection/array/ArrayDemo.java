@@ -1,4 +1,4 @@
-package main.array;
+package main.collection.array;
 
 /**
  * Created by Administrator on 2016/8/22.

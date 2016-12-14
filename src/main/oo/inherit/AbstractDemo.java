@@ -1,4 +1,4 @@
-package main.inherit;
+package main.oo.inherit;
 
 /**
  * Created by Administrator on 2016/8/14.

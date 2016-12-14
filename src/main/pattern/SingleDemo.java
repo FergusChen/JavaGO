@@ -13,36 +13,51 @@ package main.pattern;
  * */
 
 /**
- * 懒汉式
+ * 懒汉式， 加锁前后两次判断，线程安全。
  * */
-class Single1{
-    private static Single1 s = null;
-    private Single1(){}
+class Singleton1 {
+    private static Singleton1 s = null;
+    private Singleton1(){}
     /**
      * @param
      * @return
      * */
-    private static Single1 getInstance(){
+    public static Singleton1 getInstance(){
 //        if(s == null){
-//            s = new Single1(); //懒汉式在这里容易出现多线程同步的问题，可能new出多个对象。解决方案就是把方法加synchronized，但这样效率就低了。
+//            s = new Singl
+// eton1(); //懒汉式在这里容易出现多线程同步的问题，可能new出多个对象。解决方案就是把方法加synchronized，但这样效率就低了。
 //        }
-        //下面这个是即解决多线程问题，又解决低效问题的方法。需要时再加锁。
+        //下面这个是即解决多线程问题，又解决低效问题的方法。
         if(s == null){
-            synchronized (Single1.class){
+            synchronized (Singleton1.class){
                 if(s== null){
-                    s = new Single1();
+                    s = new Singleton1();
                 }
             }
         }
         return s;
     }
 }
+/**懒汉式：静态内部类实现单例模式。*/
+class Singleton2{
+    //静态内部类
+    private static class LazyHolder{
+        private static final Singleton2 INSTANCE = new Singleton2();
+    }
 
-/** 饿汉式加载， 开发时常用*/
+    private Singleton2(){}
+    public static Singleton2 getInstance(){
+        return LazyHolder.INSTANCE;
+    }
+}
+
+/** 饿汉式单例，类一旦加载就会初始化。
+ * 不管用不用都会占据内存。天生线程安全。
+ * 因为简单，所以也很常用*/
 class Single2{
     private static Single2 s = new Single2();
     private Single2(){}
-    private static Single2 getInstance(){
+    public static Single2 getInstance(){
         return s;
     }
 }
