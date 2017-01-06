@@ -11,7 +11,6 @@ build
 .project
 .settings
 .metadata
-*.iml
 .idea
 workspace.xml
 out

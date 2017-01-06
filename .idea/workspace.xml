@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55cb44d9-a0c3-4619-91b6-3f08bdfafe10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/BankDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/DeadLockDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/JoinDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/ProducerConsumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/ProducerConsumer2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/ResourceSync.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/StopThreadDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/ThreadDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/ThreadSignaling.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/thread/TicketDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="55cb44d9-a0c3-4619-91b6-3f08bdfafe10" name="Default" comment="" />
     <ignored path="studyVideo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,7 +38,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-              <folding />
+              <folding>
+                <element signature="e#419#420#0" expanded="false" />
+                <element signature="e#451#452#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +76,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="23" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="e#1710#1711#0" expanded="false" />
+                <element signature="e#1744#1745#0" expanded="false" />
+                <element signature="e#1943#1944#0" expanded="false" />
+                <element signature="e#1977#1978#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -520,7 +516,7 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/软件工具包/专业学习软件/Spark IDE/idea v14 registor" />
     <property name="SearchEverywhereHistoryKey" value="new&#9;PSI&#9;JAVA://com.sun.org.apache.bcel.internal.generic.NEW" />
   </component>
   <component name="RunManager" selected="Application.JoinDemo">
@@ -982,12 +978,12 @@
       <workItem from="1481853027998" duration="4688000" />
       <workItem from="1482112431497" duration="6948000" />
       <workItem from="1483585415294" duration="7551000" />
-      <workItem from="1483666995919" duration="1176000" />
+      <workItem from="1483666995919" duration="2759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94185000" />
+    <option name="totallyTimeSpent" value="95768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="745" extended-state="0" />
@@ -1360,7 +1356,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#451#452#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1368,7 +1367,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#1710#1711#0" expanded="false" />
+            <element signature="e#1744#1745#0" expanded="false" />
+            <element signature="e#1943#1944#0" expanded="false" />
+            <element signature="e#1977#1978#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
