@@ -21,6 +21,7 @@ public class JoinDemo {
         for(int i = 0; i < 60; i++){
             System.out.println(Thread.currentThread().getName() + "...." + i);
         }
+        
     }
 }
 
