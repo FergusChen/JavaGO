@@ -1,8 +1,8 @@
 package main.io;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo;
+
+import java.io.*;
 
 /**
  * Created by yudong on 17/1/16.
@@ -14,9 +14,15 @@ import java.io.IOException;
 public class FileCopyDemo {
     public static void main(String[] args) {
 //        copy1();
-        copy2();
+//        copy2();
+//        copy3();
+        /**以上都是拷贝文件, 字符流*/
+        copyImage();
+
+
     }
 
+    /**最简单粗暴的方法, 不推荐*/
     public static void copy1() {
         FileWriter writer = null;
         FileReader reader = null;
@@ -79,4 +85,75 @@ public class FileCopyDemo {
             }
         }
     }
+
+    /**用缓冲读写对象处理, 速度更快*/
+    public static void copy3(){
+        BufferedReader bufReader = null;
+        BufferedWriter bufWriter = null;
+        try{
+            bufReader = new BufferedReader(new FileReader("demo.txt"));
+            bufWriter = new BufferedWriter(new FileWriter("demoBuf.txt"));
+            String line = null;
+            while((line = bufReader.readLine()) != null){
+                bufWriter.write(line);
+                bufWriter.newLine();
+                bufWriter.flush();
+            }
+
+        }catch (IOException e){
+            throw new RuntimeException("读写错误");
+        }finally {
+            try{
+                if(bufReader != null){
+                    bufReader.close();
+                }
+            }catch(IOException e){
+                throw new RuntimeException("关闭流失败");
+            }
+
+            try{
+                if(bufWriter != null){
+                    bufWriter.close();
+                }
+            }catch (IOException e){
+                throw new RuntimeException("关闭流失败");
+            }
+        }
+    }
+
+    /**复制图片   这里用到字节流*/
+    public static void copyImage(){
+        FileOutputStream outputStream = null;
+        FileInputStream inputStream = null;
+        try{
+            outputStream = new FileOutputStream("copy.png");
+            inputStream = new FileInputStream("run.png");
+            byte[] buf = new byte[1024];
+            int len = 0;
+            while((len = inputStream.read(buf)) != -1){
+                outputStream.write(buf, 0, len);
+            }
+        }catch (IOException e){
+            throw new RuntimeException("读写异常");
+        }finally {
+            try{
+                if(outputStream != null){
+                    outputStream.close();
+                }
+            }catch (IOException e){
+                throw new RuntimeException("关闭流失败");
+            }
+
+            try{
+                if(inputStream != null){
+                    inputStream.close();
+                }
+            }catch (IOException e){
+                throw new RuntimeException("关闭流失败");
+            }
+        }
+    }
+
+
+
 }

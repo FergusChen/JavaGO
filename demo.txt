@@ -1,2 +1,2 @@
-demo append something.
-hello~
+new bufferedWriter
+hello
