@@ -23,8 +23,8 @@ public class BufferedStreamDemo {
         FileInputStream input = null;
         MyBufferedInputStream inputStream = null;
         try {
-            input = new FileInputStream("信乐团-海阔天空.mp3");
-            outputStream = new FileOutputStream("海阔天空.mp3");
+            input = new FileInputStream("/Users/yudong/Desktop/信乐团-海阔天空.mp3");
+            outputStream = new FileOutputStream("/Users/yudong/Desktop/海阔天空.mp3");
             inputStream = new MyBufferedInputStream(input);
             int byteData = 0;
 
