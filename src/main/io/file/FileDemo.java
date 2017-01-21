@@ -10,8 +10,8 @@ import java.io.IOException;
  * 演示File类的基本操作,
  */
 public class FileDemo {
-    static final String BasicPath = "/Users/yudong/Desktop/gitRepo/JavaGO";
-    static final String TmpPath = "/Users/yudong/Desktop/gitRepo/JavaGO/tempDirectory";
+    public static final String BasicPath = "/Users/yudong/Desktop/gitRepo/JavaGO";
+    public static final String TmpPath = "/Users/yudong/Desktop/gitRepo/JavaGO/tempDirectory";
 
     public static void main(String[] args) throws IOException{
 //        basicDemo();

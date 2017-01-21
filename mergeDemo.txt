@@ -1,0 +1,5 @@
+new bufferedWriter
+hellonew bufferedWriter
+hello
+demo append something.
+hello~
