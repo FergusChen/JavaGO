@@ -52,7 +52,7 @@ class SuperMan{
 
 /**
  * 装饰类实现LineNumberReader
- * 这里,装饰类配合继承, 可以省去大量代码.
+ * 这里,装饰类配合继承, 可以省去大量代码(直接使用BufferedReader的ReadLine方法).
  * */
 class MyLineNumberReader extends BufferedReader{
     private Reader r;

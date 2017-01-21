@@ -9,6 +9,12 @@ import java.io.IOException;
  *
  * 字符流的两个基类:Writer和Reader, 这两个抽象类有一些常用的直接子类,如BufferedWriter, StringWriter, BufferReader等
  * 这里演示IO流的写操作和异常处理. IO异常最好不要抛
+ *
+ * 字符流常用类:
+ * FileWriter, FileReader, BufferedWriter, BufferedReader
+ *
+ * 字节流常用类:
+ * FileInputStream, FileOutputStream, BufferedInputStream, BufferedOutputStream
  */
 public class BasicDemo {
     public static void main(String[] args) {

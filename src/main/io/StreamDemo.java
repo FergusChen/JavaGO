@@ -1,8 +1,6 @@
 package main.io;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by yudong on 17/1/17.
@@ -14,7 +12,9 @@ public class StreamDemo {
 //        writeFile();
 //        readFile1();
 //        readFile2();
-        readFile3();
+//        readFile3();
+
+        keyboardInput();
     }
 
     /**写字节流的方法*/
@@ -24,6 +24,7 @@ public class StreamDemo {
         stream.close();
     }
 
+    /**读字节流的方法*/
     public static void readFile1() throws  IOException{
         FileInputStream stream = new FileInputStream("demo.txt");
         int ch = 0;
@@ -56,5 +57,35 @@ public class StreamDemo {
         stream.read(buf);
         System.out.println(new String(buf));
         stream.close();
+    }
+
+    /**
+     * 键盘输入方法
+     * 也演示了字符流和字节流之间的转换. InputStreamReader和OutputStreamWriter两个类. 作为桥梁
+     * InputStreamReader 传入字符流对象, 将其转换为字节流.
+     *
+     * */
+    public static void keyboardInput() throws IOException{
+
+        //键盘的输入
+        BufferedReader bufReader = new BufferedReader(new InputStreamReader(System.in));
+
+//        BufferedReader bufReader = new BufferedReader(new InputStreamReader(new FileInputStream("demo.txt")));
+
+        //定义输出流
+//        BufferedWriter bufWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        BufferedWriter bufWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("console.txt")));
+
+        String line = null;
+        while((line = bufReader.readLine()) != null){
+            if("over".equals(line)){
+                break;
+            }
+            bufWriter.write(line);
+            bufWriter.newLine();
+            bufWriter.flush();
+        }
+        bufWriter.close();
     }
 }

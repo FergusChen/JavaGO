@@ -1,10 +1,7 @@
 package main.io;
 
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 /**
  * Created by yudong on 17/1/17.
@@ -21,6 +18,7 @@ public class BufferedStreamDemo {
     public static void copyMusic(){
         FileOutputStream outputStream = null;
         FileInputStream input = null;
+
         MyBufferedInputStream inputStream = null;
         try {
             input = new FileInputStream("/Users/yudong/Desktop/信乐团-海阔天空.mp3");
@@ -66,7 +64,7 @@ class MyBufferedInputStream {
     /**
      * 用缓冲区的方法来进行字节的读取(注意陷阱)
      * 陷阱: 字节流每次读取1个字节, 但判断结束条件是 -1, 读到的1个字节是有可能是11111111 (即-1), 有可能刚开始读,然后就结束.
-     * 解决办法: 每次读1个字节,都将其提成为4个字节的整数, 前面3个字节补 0;
+     * 解决办法: 每次读1个字节,都将其提升为4个字节的整数, 前面3个字节补 0;
      * myRead方法的思路, 当count == 0时, 一次读1024字节, 然后, 一个字节一个字节地返回, 只要count != 0, 就返回buf中相应位置的字节.
      */
     public int myRead() throws IOException {
