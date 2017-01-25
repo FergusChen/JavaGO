@@ -28,7 +28,7 @@ public class ExceptionLog {
             SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String date = dateFormatter.format(d);
 
-            PrintStream out = new PrintStream("exception.log");
+            PrintStream out = new PrintStream("testFiles/exception.log");
             out.println(date);
             System.setOut(out);
         } catch (IOException ex) {

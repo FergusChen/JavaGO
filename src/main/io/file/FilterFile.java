@@ -17,7 +17,7 @@ public class FilterFile {
         List files = new ArrayList<File>();
         fileListRecursion(dir, files);
         System.out.println(files.size());
-        File javaFile = new File(dir, "javaFile.txt");
+        File javaFile = new File(dir, "testFiles/javaFile.txt");
         writeToFile(files, javaFile.toString());
     }
 

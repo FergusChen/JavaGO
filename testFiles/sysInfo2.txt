@@ -1,5 +1,5 @@
 #\u6CE8\u91CA\u4FE1\u606F:\u4FEE\u6539zzke\u5C5E\u6027
-#Sat Jan 21 10:25:30 CST 2017
+#Wed Jan 25 17:07:35 CST 2017
 java.runtime.name=Java(TM) SE Runtime Environment
 sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib
 java.vm.version=25.111-b14
@@ -7,7 +7,7 @@ gopherProxySet=false
 java.vm.vendor=Oracle Corporation
 java.vendor.url=http\://java.oracle.com/
 path.separator=\:
-idea.launcher.port=7539
+idea.launcher.port=7534
 java.vm.name=Java HotSpot(TM) 64-Bit Server VM
 file.encoding.pkg=sun.io
 user.country=CN

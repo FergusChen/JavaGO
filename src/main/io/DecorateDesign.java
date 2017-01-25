@@ -18,7 +18,7 @@ import java.io.Reader;
  */
 public class DecorateDesign {
 public static void main(String[] args) throws  IOException{
-    FileReader reader = new FileReader("demo.txt");
+    FileReader reader = new FileReader("testFiles/demo.txt");
     MyLineNumberReader mylinereader = new MyLineNumberReader(reader);
     String line = null;
     while((line = mylinereader.myReadLine()) != null){

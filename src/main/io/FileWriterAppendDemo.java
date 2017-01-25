@@ -10,7 +10,7 @@ public class FileWriterAppendDemo {
     public static void main(String[] args){
         FileWriter writer = null;
         try{
-            writer = new FileWriter("/Users/yudong/Desktop/demo.txt", true); //第2个参数指定是否append
+            writer = new FileWriter("testFiles/demo.txt", true); //第2个参数指定是否append
             writer.write("\nhello~");
             writer.flush();
         }catch (IOException e){

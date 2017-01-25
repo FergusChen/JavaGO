@@ -1,7 +1,5 @@
 package main.io;
 
-import com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo;
-
 import java.io.*;
 
 /**
@@ -13,9 +11,9 @@ import java.io.*;
  */
 public class FileCopyDemo {
     public static void main(String[] args) {
-//        copy1();
-//        copy2();
-//        copy3();
+        copy1();
+        copy2();
+        copy3();
         /**以上都是拷贝文件, 字符流*/
         copyImage();
 
@@ -27,8 +25,8 @@ public class FileCopyDemo {
         FileWriter writer = null;
         FileReader reader = null;
         try {
-            writer = new FileWriter("demo1.txt");
-            reader = new FileReader("demo.txt");
+            writer = new FileWriter("testFiles/demo1.txt");
+            reader = new FileReader("testFiles/demo.txt");
             int ch = 0;
             while ((ch = reader.read()) != -1) {
                 writer.write(ch);
@@ -56,8 +54,8 @@ public class FileCopyDemo {
         FileWriter writer = null;
         FileReader reader = null;
         try {
-            writer = new FileWriter("demo1.txt");
-            reader = new FileReader("demo.txt");
+            writer = new FileWriter("testFiles/demo1.txt");
+            reader = new FileReader("testFiles/demo.txt");
             char[] buf = new char[1024];
             int len = 0;
             while ((len = reader.read(buf)) != -1) {
@@ -91,8 +89,8 @@ public class FileCopyDemo {
         BufferedReader bufReader = null;
         BufferedWriter bufWriter = null;
         try{
-            bufReader = new BufferedReader(new FileReader("demo.txt"));
-            bufWriter = new BufferedWriter(new FileWriter("demoBuf.txt"));
+            bufReader = new BufferedReader(new FileReader("testFiles/demo.txt"));
+            bufWriter = new BufferedWriter(new FileWriter("testFiles/demoBuf.txt"));
             String line = null;
             while((line = bufReader.readLine()) != null){
                 bufWriter.write(line);
@@ -126,8 +124,8 @@ public class FileCopyDemo {
         FileOutputStream outputStream = null;
         FileInputStream inputStream = null;
         try{
-            outputStream = new FileOutputStream("copy.png");
-            inputStream = new FileInputStream("run.png");
+            outputStream = new FileOutputStream("testFiles/copy.png");
+            inputStream = new FileInputStream("testFiles/run.png");
             byte[] buf = new byte[1024];
             int len = 0;
             while((len = inputStream.read(buf)) != -1){

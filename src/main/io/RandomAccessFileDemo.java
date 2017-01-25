@@ -16,13 +16,13 @@ import java.io.RandomAccessFile;
  */
 public class RandomAccessFileDemo {
     public static void main(String[] args) throws IOException{
-//        writeFile();
+        writeFile();
 
         readFile();
     }
 
     public static void writeFile() throws IOException{
-        RandomAccessFile accessFile = new RandomAccessFile("random.txt", "rw");
+        RandomAccessFile accessFile = new RandomAccessFile("testFiles/random.txt", "rw");
         accessFile.write("李四".getBytes());
         accessFile.writeInt(98);
 
@@ -32,7 +32,7 @@ public class RandomAccessFileDemo {
     }
 
     public static void readFile() throws IOException{
-        RandomAccessFile accessFile = new RandomAccessFile("random.txt", "r");
+        RandomAccessFile accessFile = new RandomAccessFile("testFiles/random.txt", "r");
         byte[] buf = new byte[6];  //utf-8编码, 每个汉字是3个字节
         accessFile.read(buf);
         String name = new String(buf);

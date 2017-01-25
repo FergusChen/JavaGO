@@ -1,4 +1,4 @@
-2017-01-20 18:13:03
+2017-01-25 16:47:51
 java.lang.ArrayIndexOutOfBoundsException: 2
 	at main.io.ExceptionLog.main(ExceptionLog.java:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

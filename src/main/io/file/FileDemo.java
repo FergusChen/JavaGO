@@ -10,6 +10,7 @@ import java.io.IOException;
  * 演示File类的基本操作,
  */
 public class FileDemo {
+    public static final String TestFilesPath = "/Users/yudong/Desktop/gitRepo/JavaGO/testFiles";
     public static final String BasicPath = "/Users/yudong/Desktop/gitRepo/JavaGO";
     public static final String TmpPath = "/Users/yudong/Desktop/gitRepo/JavaGO/tempDirectory";
 
@@ -18,26 +19,26 @@ public class FileDemo {
 //        fileList();
 //        filterFile();
 
-//        File dir = new File(BasicPath);
+        File dir = new File(BasicPath);
 //        showDir(dir);
-//        showDir(dir, 0);
+        showDir(dir, 0);
 
-        File tempDir = new File(TmpPath);
-        removeDir(tempDir);
+//        File tempDir = new File(TmpPath);
+//        removeDir(tempDir);
     }
 
     /**
      * File类的基本操作
      * */
     public static void basicDemo() throws IOException{
-        File f1 = new File("demo.txt");
-        File demo1 = new File("demo1.txt");
-        File f2 = new File(BasicPath, "fileDemo.txt");
+        File f1 = new File("testFiles/demo.txt");
+        File demo1 = new File("testFiles/demo1.txt");
+        File f2 = new File(TestFilesPath, "fileDemo.txt");
         System.out.println("创建fileDemo.txt:" + f2.createNewFile()); //创建新文件, 返回Boolean值. File类方法createTempFile创建临时文件. 放在系统临时文件目录.
         System.out.println("删除fileDemo.txt:" + f2.delete());
         System.out.println("重命名/移动demo.txt" + demo1.renameTo(f2));
 
-        File dir = new File("/Users/yudong/Desktop/gitRepo/JavaGO");
+        File dir = new File(BasicPath);
         File f3 = new File("tempDir");
         File f4 = new File("tempDir" + File.separator + "aa" + File.separator + "bb" + File.separator + "cc");
         System.out.println("创建目录:" + f3.mkdir());

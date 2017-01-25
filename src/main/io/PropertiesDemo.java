@@ -37,7 +37,7 @@ public class PropertiesDemo {
      * */
     public static void countProperties() throws IOException{
         Properties prop = new Properties();
-        File file = new File("count.properties");
+        File file = new File("testFiles/count.properties");
         if(!file.exists()){
             file.createNewFile();
         }

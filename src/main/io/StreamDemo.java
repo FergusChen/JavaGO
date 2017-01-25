@@ -52,7 +52,7 @@ public class StreamDemo {
      * 对于小文件,可以这样处理, 一次性读出来. 但是如果文件过大的话, 可能会溢出.
      * */
     public static void readFile3() throws IOException{
-        FileInputStream stream  = new FileInputStream("demo.txt");
+        FileInputStream stream  = new FileInputStream("testFiles/demo.txt");
         byte[] buf = new byte[stream.available()]; //available方法返回字节大小.
         stream.read(buf);
         System.out.println(new String(buf));
@@ -75,7 +75,7 @@ public class StreamDemo {
         //定义输出流
 //        BufferedWriter bufWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        BufferedWriter bufWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("console.txt")));
+        BufferedWriter bufWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("testFiles/console.txt")));
 
         String line = null;
         while((line = bufReader.readLine()) != null){

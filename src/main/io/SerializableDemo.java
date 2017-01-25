@@ -15,12 +15,12 @@ import java.io.ObjectOutputStream;
  */
 public class SerializableDemo {
     public static void main(String[] args) throws Exception{
-//        writePerson();
+        writePerson();
         readPerson();
     }
 
     public static void writePerson() throws Exception{
-        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("person.object"));
+        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("testFiles/person.object"));
 
         outputStream.writeObject(new Person("fergus", 25));
 
@@ -28,7 +28,7 @@ public class SerializableDemo {
     }
 
     public static void readPerson() throws Exception{
-        ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("person.object"));
+        ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("testFiles/person.object"));
         Person p = (Person)inputStream.readObject();
         System.out.println("姓名:" + p.getName() + "\t 年龄:" + p.getAge());
         inputStream.close();

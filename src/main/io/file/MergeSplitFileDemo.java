@@ -19,9 +19,9 @@ import java.util.Vector;
 public class MergeSplitFileDemo {
     public static void main(String[] args) throws IOException{
 
-//        mergeFile();
+        mergeFile();
 //        splitFile();
-        mergePicture();
+//        mergePicture();
     }
 
     /**
@@ -30,14 +30,14 @@ public class MergeSplitFileDemo {
      */
     public static void mergeFile() throws  IOException{
         Vector<FileInputStream> vector = new Vector<>();
-        vector.add(new FileInputStream("demo.txt"));
-        vector.add(new FileInputStream("demoBuf.txt"));
-        vector.add(new FileInputStream("fileDemo.txt"));
+        vector.add(new FileInputStream("testFiles/demo.txt"));
+        vector.add(new FileInputStream("testFiles/demoBuf.txt"));
+        vector.add(new FileInputStream("testFiles/fileDemo.txt"));
 
         Enumeration<FileInputStream> enumeration = vector.elements();
 
         SequenceInputStream inputStream = new SequenceInputStream(enumeration);
-        FileOutputStream outputStream = new FileOutputStream("mergeDemo.txt");
+        FileOutputStream outputStream = new FileOutputStream("testFiles/mergeDemo.txt");
         byte[] buf = new byte[1024];
         int len = 0;
         while((len = inputStream.read(buf)) != -1){
@@ -53,7 +53,7 @@ public class MergeSplitFileDemo {
      * @throws IOException
      */
     public static void splitFile() throws IOException{
-        FileInputStream inputStream = new FileInputStream("run.png");
+        FileInputStream inputStream = new FileInputStream("testFiles/run.png");
         FileOutputStream outputStream = null;
 
         byte[] buf = new byte[1024];

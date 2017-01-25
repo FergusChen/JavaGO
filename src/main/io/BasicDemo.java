@@ -20,7 +20,7 @@ public class BasicDemo {
     public static void main(String[] args) {
         FileWriter writer = null; //建立FileWriter引用
         try{
-            writer = new FileWriter("/Users/yudong/Desktop/demo.txt");//打开文件, 处理异常
+            writer = new FileWriter("testFiles/demo.txt");//打开文件, 处理异常
             writer.write("demo append something.");//将数据写入到缓存中.
             writer.flush();
         }catch(IOException e){

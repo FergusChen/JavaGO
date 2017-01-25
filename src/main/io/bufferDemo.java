@@ -9,8 +9,8 @@ import java.io.*;
  */
 public class bufferDemo {
     public static void main(String[] args){
-//        bufferedWriterDemo();
-//        bufferedReaderDemo();
+        bufferedWriterDemo();
+        bufferedReaderDemo();
         lineNumberReaderDemo();
 
     }
@@ -19,7 +19,7 @@ public class bufferDemo {
         FileWriter writer  = null;
         BufferedWriter bufWriter = null;
         try{
-            writer = new FileWriter("demo.txt");
+            writer = new FileWriter("testFiles/demo.txt");
             bufWriter = new BufferedWriter(writer);//BufferedWriter目的是提高流的执行速度,所以必须先有流
 
             bufWriter.write("new bufferedWriter");
@@ -42,7 +42,7 @@ public class bufferDemo {
         FileReader  reader = null;
         BufferedReader bufReader = null;
         try{
-            reader = new FileReader("demo.txt");
+            reader = new FileReader("testFiles/demo.txt");
             bufReader = new BufferedReader(reader);
             String line = null;
             while((line = bufReader.readLine()) != null){
@@ -65,7 +65,7 @@ public class bufferDemo {
         FileReader  reader = null;
         LineNumberReader lineReader = null;
         try{
-            reader = new FileReader("demo.txt");
+            reader = new FileReader("testFiles/demo.txt");
             lineReader = new LineNumberReader(reader);
             String line = null;
             lineReader.setLineNumber(100); //设置行号

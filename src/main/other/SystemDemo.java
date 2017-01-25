@@ -29,14 +29,14 @@ public class SystemDemo {
 //        System.out.println("os name: " + osName);
 //
         //properties的保存, list 或store
-        properties.list(new PrintStream("sysInfo.txt")); //list可以将properties直接保存到输出流
+        properties.list(new PrintStream("testFiles/sysInfo.txt")); //list可以将properties直接保存到输出流
         properties.setProperty("zzke", "中文设置");
-        OutputStreamWriter outputStream =new OutputStreamWriter( new FileOutputStream("sysInfo2.txt"),"utf-8");
+        OutputStreamWriter outputStream =new OutputStreamWriter( new FileOutputStream("testFiles/sysInfo2.txt"),"utf-8");
         properties.store(outputStream, "注释信息:修改zzke属性");
         outputStream.close();
 
         //load将properties都加载到内存, 指定输入流
-        InputStreamReader reader = new InputStreamReader(new FileInputStream("sysInfo.txt"), "utf-8");
+        InputStreamReader reader = new InputStreamReader(new FileInputStream("testFiles/sysInfo.txt"), "utf-8");
         Properties prop = new Properties();
         prop.load(reader); //InputStreamReader指定编码类型
         System.out.println(prop);
