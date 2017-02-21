@@ -11,7 +11,7 @@ package main.jdk5;
  * 枚举也可以定义构造方法, 但必须在枚举元素之后.
  * 构造方法必须是私有的, 在枚举元素定义时调用.
  */
-public class Menu {
+public class Enum {
     public enum Week{
         SUN(), MON(1), TUES(2), WED, THURS, FRI, SAT;
 

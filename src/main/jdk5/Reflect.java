@@ -2,6 +2,7 @@ package main.jdk5;
 
 import main.collection.Person;
 import main.io.PropertiesDemo;
+import main.jdk5.test.ReflectPoint;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -77,8 +78,8 @@ public class Reflect {
 
         //getConstructor()方法获取指定的构造方法 , 通过指定参数类型来获取相应的构造方法对象. Constructor可以获取相应的修饰符
         //获取所属类, 更重要的是newInstance新建实例.
-        Constructor constructor0 = String.class.getConstructor(StringBuffer.class);
-        String str = (String)constructor0.newInstance(new StringBuffer("abc")); //newInstance返回泛型对象,需要强制转换.
+        Constructor<String> constructor0 = String.class.getConstructor(StringBuffer.class);
+        String str = constructor0.newInstance(new StringBuffer("abc")); //newInstance返回泛型对象, 若泛型不指定类型,就需要强制转换.
         System.out.println(str.charAt(1));
     }
 
@@ -155,7 +156,9 @@ public class Reflect {
 
     public static void reflectObj() throws Exception{
         //
-        InputStream inputStream = new FileInputStream("resources/config.properties");
+        InputStream inputStream = new FileInputStream("resources/config.properties");//找resources文件夹的资源文件
+//        InputStream inputStream = Reflect.class.getClassLoader().getResourceAsStream("main/jdk5/config.properties");//这是找同一个包里的资源文件
+//        InputStream inputStream = Reflect.class.getResourceAsStream("main/jdk5/config.properties"); //Reflect类来找
         Properties props = new Properties();
         props.load(inputStream);
         inputStream.close();
@@ -178,45 +181,7 @@ public class Reflect {
 
 }
 
-/**
- * 测试类
- */
-class ReflectPoint{
-    private int x;
-    public int y;
-    public String str1 = "ball";
-    public String str2 = "baby";
-    public String str3 = "case";
 
-    public ReflectPoint(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    @Override
-    public String toString() {
-        return "str1: " + str1 + "\t str2: " + str2 + "\t str3: " + str3;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ReflectPoint point = (ReflectPoint) o;
-
-        if (x != point.x) return false;
-        return y == point.y;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = x;
-        result = 31 * result + y;
-        return result;
-    }
-}
 
 
 class TestArguments{
